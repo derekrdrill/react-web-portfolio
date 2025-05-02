@@ -44,7 +44,8 @@ export const PROJECTS = [
     title: 'Github Finder Project',
     description: `A tool that pulls data from the Github API and cleanly presents it in a user-friendly React UI`,
     icon: faGithubSquare,
-    to: '/github-finder',
+    to: 'https://github-finder-tool-two.vercel.app/',
+    externalSrc: true,
   },
   {
     id: 2,
