@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`GithubUserProfileBio tests renders correctly 1`] = `
-<span
-  className="bio"
->
-  TEST BIO
-</span>
-`;
