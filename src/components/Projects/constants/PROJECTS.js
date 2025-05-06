@@ -7,7 +7,6 @@ import {
   faShoppingBasket,
 } from '@fortawesome/fontawesome-free-solid';
 import { faGithubSquare } from '@fortawesome/free-brands-svg-icons';
-// import nbaSVG from '../../../assets/nba2.svg';
 
 export const PROJECTS = [
   {
@@ -26,6 +25,15 @@ export const PROJECTS = [
     to: '/nba-everything',
   },
   {
+    id: 3,
+    title: 'Github Finder Project',
+    description:
+      'A tool for searching Github users, cleanly presented it in a user-friendly Nuxt, Vue, Typescript app. Data is sourced from the Github API.',
+    icon: faGithubSquare,
+    to: 'https://github-finder-live.vercel.app/',
+    externalSrc: true,
+  },
+  {
     id: 5,
     title: 'Cocktail App',
     description: `Users can search by drink name or ingredients to return data on over 635 different cocktails! 🥂🍻`,
@@ -38,14 +46,6 @@ export const PROJECTS = [
     description: `An app that shows listings, current offers on listings and allows to create new listings. All data is pulled from a MongoDB via an Express backend.`,
     icon: faBuilding,
     to: '/housing-marketplace/auth',
-  },
-  {
-    id: 3,
-    title: 'Github Finder Project',
-    description: `A tool that pulls data from the Github API and cleanly presents it in a user-friendly React UI`,
-    icon: faGithubSquare,
-    to: 'https://github-finder-tool-two.vercel.app/',
-    externalSrc: true,
   },
   {
     id: 2,
