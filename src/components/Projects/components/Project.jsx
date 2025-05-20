@@ -36,12 +36,12 @@ export const Project = ({ darkMode, project, isDisabled }) => (
             </Grid>
           </Grid>
         </Grid>
+        {isDisabled && (
+          <Typography color='red' variant='p'>
+            Under construction
+          </Typography>
+        )}
       </Grid>
-      {isDisabled && (
-        <Typography color='red' variant='p'>
-          Under construction
-        </Typography>
-      )}
     </ProjectContentContainer>
   </ProjectLink>
 );
