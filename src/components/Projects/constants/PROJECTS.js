@@ -22,7 +22,8 @@ export const PROJECTS = [
     title: 'NBA Everything',
     description: `An all things NBA data, sourced from the Ball Don't Lie API`,
     icon: faBasketballBall,
-    to: '/nba-everything',
+    to: 'https://nba-everything-dev.vercel.app/',
+    externalSrc: true,
   },
   {
     id: 3,
