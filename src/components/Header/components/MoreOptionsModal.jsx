@@ -8,9 +8,9 @@ import { faGoogleDrive } from '@fortawesome/free-brands-svg-icons';
 
 import { DarkLightModeContext } from '../../DarkLightMode/context/DarkLightModeContext';
 
-import resume from '../../../assets/Resume_DRD.pdf';
-
-const resumeOnlineLink = process.env.REACT_APP_RESUME_LINK;
+import resume from '../../../assets/Resume.pdf';
+import { resumeLink } from '../../../constants';
+// const resumeOnlineLink = process.env.REACT_APP_RESUME_LINK;
 
 export const MoreOptionsModal = ({ open, handleModalClose, quickViewOpen }) => {
   const { darkMode } = React.useContext(DarkLightModeContext);
@@ -40,7 +40,7 @@ export const MoreOptionsModal = ({ open, handleModalClose, quickViewOpen }) => {
                 </StyledLink>
               </Grid>
               <Grid item xs={12} md={4} lg={4}>
-                <StyledLink href={resumeOnlineLink} target='_blank'>
+                <StyledLink href={resumeLink} target='_blank'>
                   <Button color='info' fullWidth variant='outlined'>
                     Open Google Doc
                     <ResumeOptionsButtonIcon icon={faGoogleDrive} />

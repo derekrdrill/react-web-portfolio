@@ -6,7 +6,7 @@ import { Typography, List, ListItem } from '@mui/material';
 
 import { DarkLightModeContext } from '../../DarkLightMode/context/DarkLightModeContext';
 
-import { ABOUT_ME_TEXT } from '../constants/ABOUT_ME_TEXT';
+import { ABOUT_ME_TEXT, ABOUT_ME_TITLE } from '../constants/ABOUT_ME_TEXT';
 import bitmojiChillinWithBirds from '../../../assets/bitmoji_chillinWithBirds1.png';
 
 const AboutMe = ({ id }) => {
@@ -18,9 +18,14 @@ const AboutMe = ({ id }) => {
       <AboutMeContainer darkMode={darkMode} id={id} fluid>
         <Row>
           <Col className='py-3'>
-            <AboutMeTitle className='text-center' component='h1' darkMode={darkMode} variant='h3'>
+            <AboutMePageTitle
+              className='text-center'
+              component='h1'
+              darkMode={darkMode}
+              variant='h3'
+            >
               ABOUT ME
-            </AboutMeTitle>
+            </AboutMePageTitle>
           </Col>
         </Row>
         <Row>
@@ -29,28 +34,19 @@ const AboutMe = ({ id }) => {
             xs={{ span: 10, order: 'last', offset: 1 }}
             lg={{ span: 5, order: 'first', offset: 1 }}
           >
-            <AboutMeText darkMode={darkMode} variant='subtitle1' component='p'>
-              {ABOUT_ME_TEXT[1].text}
-            </AboutMeText>
-            <AboutMeText darkMode={darkMode} variant='subtitle1' component='p'>
-              {ABOUT_ME_TEXT[2].text}
-            </AboutMeText>
-            <AboutMeList>
-              <AboutMeListItem darkMode={darkMode}>{ABOUT_ME_TEXT[3].text}</AboutMeListItem>
-              <AboutMeListItem darkMode={darkMode}>{ABOUT_ME_TEXT[4].text}</AboutMeListItem>
-              <AboutMeListItem darkMode={darkMode}>{ABOUT_ME_TEXT[5].text}</AboutMeListItem>
-              <AboutMeListItem darkMode={darkMode}>{ABOUT_ME_TEXT[6].text}</AboutMeListItem>
-              <AboutMeListItem darkMode={darkMode}>{ABOUT_ME_TEXT[7].text}</AboutMeListItem>
-            </AboutMeList>
-            <AboutMeText darkMode={darkMode} variant='h6' component='p'>
-              {ABOUT_ME_TEXT[8].text}
-            </AboutMeText>
-            <AboutMeText darkMode={darkMode} variant='subtitle1' component='p'>
-              {ABOUT_ME_TEXT[9].text}
-            </AboutMeText>
-            <AboutMeText darkMode={darkMode} variant='subtitle1' component='p'>
-              {ABOUT_ME_TEXT[10].text}
-            </AboutMeText>
+            <AboutMeTitle component='h2' darkMode={darkMode} variant='h5'>
+              {ABOUT_ME_TITLE}
+            </AboutMeTitle>
+            {ABOUT_ME_TEXT.map(aboutMeParagraph => (
+              <AboutMeText
+                key={aboutMeParagraph.id}
+                darkMode={darkMode}
+                variant='subtitle1'
+                component='p'
+              >
+                {aboutMeParagraph.text}
+              </AboutMeText>
+            ))}
           </AboutMeTextContainer>
           <AboutMeBitmojiContainer xs={12} lg={6}>
             <AboutMeBitmoji src={bitmojiChillinWithBirds} alt='Chillin with birds' />
@@ -83,13 +79,22 @@ export const AboutMeContainer = styled(Container)(({ darkMode }) => ({
   borderImageSlice: 1,
 }));
 
-export const AboutMeTitle = styled(Typography)(({ darkMode }) => ({
+export const AboutMePageTitle = styled(Typography)(({ darkMode }) => ({
   fontFamily: 'Shizuru',
   fontWeight: darkMode ? 'normal' : 'bold',
   color: darkMode ? 'gainsboro' : 'darkslategray',
 }));
 
+export const AboutMeTitle = styled(Typography)(({ darkMode }) => ({
+  fontFamily: 'Shizuru',
+  fontSize: 20,
+  color: darkMode ? 'gainsboro' : 'darkslategray',
+}));
+
 export const AboutMeTextContainer = styled(Col)(({ darkMode }) => ({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: 20,
   padding: 20,
   height: 550,
   overflowY: 'auto',
