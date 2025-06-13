@@ -10,7 +10,6 @@ import { DarkLightModeContext } from '../../DarkLightMode/context/DarkLightModeC
 
 import resume from '../../../assets/Resume.pdf';
 import { resumeLink } from '../../../constants';
-// const resumeOnlineLink = process.env.REACT_APP_RESUME_LINK;
 
 export const MoreOptionsModal = ({ open, handleModalClose, quickViewOpen }) => {
   const { darkMode } = React.useContext(DarkLightModeContext);
