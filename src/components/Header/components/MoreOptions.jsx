@@ -12,7 +12,7 @@ import DarkLightMode from '../../DarkLightMode/components/DarkLightMode';
 import { FileQuickView } from '../../FileQuickView/FileQuickView';
 import { LoaderSpinner } from '../../LoaderSpinner/LoaderSpinner';
 
-import resumePDF from '../../../assets/Resume_DRD.pdf';
+import resumePDF from '../../../assets/Resume.pdf';
 
 const resumeOnlineLink = process.env.REACT_APP_RESUME_LINK;
 
