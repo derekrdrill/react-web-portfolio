@@ -9,6 +9,7 @@ import ErrorFallback from './components/ErrorFallback/ErrorFallback';
 
 import { AlertProvider } from './components/Alert/context/AlertContext';
 import { DarkLightModeProvider } from './components/DarkLightMode/context/DarkLightModeContext';
+import HeaderProvider from './components/Header/context/HeaderContext';
 
 import { LoaderSpinner } from './components/LoaderSpinner/LoaderSpinner';
 
@@ -31,7 +32,9 @@ ReactDOM.render(
               <DarkLightModeProvider>
                 <AlertProvider>
                   <Suspense fallback={<LoaderSpinner open />}>
-                    <Header>{route.render}</Header>
+                    <HeaderProvider>
+                      <Header>{route.render}</Header>
+                    </HeaderProvider>
                   </Suspense>
                 </AlertProvider>
               </DarkLightModeProvider>
