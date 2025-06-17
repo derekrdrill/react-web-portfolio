@@ -11,6 +11,7 @@ import { MoreOptions } from './components/MoreOptions';
 import { LoaderSpinner } from '../LoaderSpinner/LoaderSpinner';
 
 import { DarkLightModeContext } from '../DarkLightMode/context/DarkLightModeContext';
+import { HeaderContext } from './context/HeaderContext';
 
 import { MORE_OPTIONS } from './constants/MORE_OPTIONS';
 import { history } from '../../index';
@@ -19,9 +20,9 @@ export const Header = ({ children }) => {
   const currentRoute = history.location.pathname;
 
   const { darkMode } = useContext(DarkLightModeContext);
+  const { isSlideDownMenuOpen, headerDispatch } = useContext(HeaderContext);
 
   const [loading, setLoading] = useState(null);
-  const [smallMenuIsOpen, setSmallMenuIsOpen] = useState(false);
 
   const homeClick = () => {
     setLoading(true);
@@ -51,16 +52,22 @@ export const Header = ({ children }) => {
                   <HeaderMenuSmallButton
                     darkMode={darkMode}
                     endIcon={
-                      smallMenuIsOpen ? <CancelPresentationIcon /> : <KeyboardDoubleArrowDownIcon />
+                      isSlideDownMenuOpen ? (
+                        <CancelPresentationIcon />
+                      ) : (
+                        <KeyboardDoubleArrowDownIcon />
+                      )
                     }
                     onClick={
                       /* istanbul ignore next */
-                      () => {
-                        setSmallMenuIsOpen(!smallMenuIsOpen);
-                      }
+                      () =>
+                        headerDispatch({
+                          type: 'SET_IS_SLIDE_DOWN_MENU_OPEN',
+                          isSlideDownMenuOpen: !isSlideDownMenuOpen,
+                        })
                     }
                   >
-                    {`${smallMenuIsOpen ? 'Close' : 'Open'} page list`}
+                    {`${isSlideDownMenuOpen ? 'Close' : 'Open'} page list`}
                   </HeaderMenuSmallButton>
                 </HeaderMenuSmallContainer>
                 <MoreOptionsContainer item>
@@ -69,7 +76,12 @@ export const Header = ({ children }) => {
               </Grid>
             </HeaderToolBar>
           </HeaderToolBarContainer>
-          <HeaderMenuListItem darkMode={darkMode} item smallMenuIsOpen={smallMenuIsOpen} xs={12}>
+          <HeaderMenuListItem
+            darkMode={darkMode}
+            item
+            isSlideDownMenuOpen={isSlideDownMenuOpen}
+            xs={12}
+          >
             <List>
               <HeaderMenu
                 headerType={currentRoute === '/' ? 'main' : 'secondary'}
@@ -105,12 +117,12 @@ export const HeaderMenuSmallContainer = styled(Grid)({
   paddingTop: 20,
 });
 
-export const HeaderMenuListItem = styled(Grid)(({ darkMode, smallMenuIsOpen }) => ({
+export const HeaderMenuListItem = styled(Grid)(({ darkMode, isSlideDownMenuOpen }) => ({
   backgroundColor: darkMode ? '#616161' : 'beige',
   boxShadow: '0 4px 2px -2px darkgray',
-  transform: smallMenuIsOpen ? 'translateY(0)' : 'translateY(-150%)',
+  transform: isSlideDownMenuOpen ? 'translateY(0)' : 'translateY(-150%)',
   transition: 'all 0.7s ease-out',
-  visibility: smallMenuIsOpen ? 'visible' : 'hidden',
+  visibility: isSlideDownMenuOpen ? 'visible' : 'hidden',
   '@media screen and (min-width: 899px)': {
     opacity: 0.4,
     transform: 'translateY(-150%)',

@@ -4,6 +4,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 import styled from 'styled-components';
 
+import { HeaderContext } from '../context/HeaderContext';
 import { DarkLightModeContext } from '../../DarkLightMode/context/DarkLightModeContext';
 
 // TODO: revisit condensing the two types of links with css instead of styled components
@@ -18,6 +19,7 @@ export const HeaderMenuOptions = ({
   menuType,
 }) => {
   const { darkMode } = React.useContext(DarkLightModeContext);
+  const { isSlideDownMenuOpen, headerDispatch } = React.useContext(HeaderContext);
 
   return headerType === 'main' ? (
     <StyledScrollLink
@@ -28,6 +30,12 @@ export const HeaderMenuOptions = ({
       offset={-80}
       spy={true}
       to={mainTo}
+      onClick={() =>
+        headerDispatch({
+          type: 'SET_IS_SLIDE_DOWN_MENU_OPEN',
+          isSlideDownMenuOpen: !isSlideDownMenuOpen,
+        })
+      }
     >
       {menuTitle}
       {menuIcon}
