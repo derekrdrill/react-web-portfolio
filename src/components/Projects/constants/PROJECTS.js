@@ -1,6 +1,4 @@
 import {
-  faFileAlt,
-  faDatabase,
   faBuilding,
   faGlassMartini,
   faBasketballBall,
@@ -10,19 +8,27 @@ import { faGithubSquare } from '@fortawesome/free-brands-svg-icons';
 
 export const PROJECTS = [
   {
-    id: 7,
-    title: 'Morning Dough',
-    description: `A donut shop ecommerce website utilizing Next JS, Typescript and Square POS`,
-    icon: faShoppingBasket,
-    to: 'http://morning-dough.com/',
-    externalSrc: true,
-  },
-  {
     id: 6,
     title: 'NBA Everything',
     description: `An all things NBA data, sourced from the Ball Don't Lie API`,
     icon: faBasketballBall,
     to: 'https://nba-everything-dev.vercel.app/',
+    externalSrc: true,
+  },
+  {
+    id: 5,
+    title: 'Cocktail App',
+    description: `Search over 635 cocktails by drink name, glass type or ingredients 🥂🍻! Built with NextJS, React, Typescript and Tailwind`,
+    icon: faGlassMartini,
+    to: 'https://find-cocktails.vercel.app/',
+    externalSrc: true,
+  },
+  {
+    id: 7,
+    title: 'Morning Dough',
+    description: `A donut shop ecommerce website utilizing Next JS, Typescript and Square POS`,
+    icon: faShoppingBasket,
+    to: 'http://morning-dough.com/',
     externalSrc: true,
   },
   {
@@ -41,27 +47,4 @@ export const PROJECTS = [
     icon: faBuilding,
     to: '/housing-marketplace/auth',
   },
-  {
-    id: 5,
-    title: 'Cocktail App',
-    description: `Users can search by drink name or ingredients to return data on over 635 different cocktails! 🥂🍻`,
-    icon: faGlassMartini,
-    to: '/drink-up',
-    isDisabled: true,
-  },
-  // {
-  //   id: 2,
-  //   title: 'Lead Input App',
-  //   description: `A simple input form that writes to a MongoDB.
-  //                     Included is a dynamic reporting table to track the input data.`,
-  //   icon: faDatabase,
-  //   to: '/lead-input-page',
-  // },
-  // {
-  //   id: 1,
-  //   title: 'Job Applications',
-  //   description: `A simple concept used to show different levels of web-form building with React`,
-  //   icon: faFileAlt,
-  //   to: '/job-apps-page',
-  // },
 ];
