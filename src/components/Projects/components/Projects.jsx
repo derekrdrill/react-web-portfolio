@@ -39,11 +39,6 @@ const Projects = ({ id }) => {
           </Grid>
           <Grid item xs={12} md={11}>
             <Grid container>
-              <TitleContainer item xs={12}>
-                <TextFont variant='subtitle1' component='h3'>
-                  Personal work to display knowledge of building React web apps
-                </TextFont>
-              </TitleContainer>
               <Grid item xs={12}>
                 <Grid container>
                   {PROJECTS.map(project => (
@@ -102,13 +97,5 @@ const ProjectsTitleText = styled(Typography)(({ darkMode }) => ({
 const StyledBitmojiImage = styled.img({
   height: 120,
   width: 120,
-});
-
-const TextFont = styled(Typography)({
-  color: '#B39BD8',
-  fontFamily: 'Kufam',
-});
-
-const TitleContainer = styled(Grid)({
-  padding: 10,
+  marginBottom: 32,
 });

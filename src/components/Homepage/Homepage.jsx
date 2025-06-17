@@ -44,8 +44,8 @@ const Homepage = ({ id }) => {
               </HomePageText>
               <br />
               <HomePageText darkMode={darkMode} variant='h6' component='h1'>
-                {`I strive to elegantly code user-friendly web apps, primarily utilizing React, Typescript, Material UI/HeadlessUI,
-                  Tailwind/Styled-Components in the front-end, and ExpressJS back-ends connected to a Mongo or Postgres database.`}
+                {`I strive to elegantly code user-friendly web apps. I am skilled at utilizing several techonologies, such as, React, NextJS, Vue, Nuxt, Typescript, Material UI, HeadlessUI,
+                  Tailwind, Styled-Components in the front-end, and ExpressJS back-ends connected to a Mongo or Postgres database.`}
               </HomePageText>
             </Grid>
           </Grid>

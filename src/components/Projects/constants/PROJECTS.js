@@ -26,6 +26,14 @@ export const PROJECTS = [
     externalSrc: true,
   },
   {
+    id: 5,
+    title: 'Cocktail App',
+    description: `Users can search by drink name or ingredients to return data on over 635 different cocktails! 🥂🍻`,
+    icon: faGlassMartini,
+    to: 'https://find-cocktails.vercel.app/',
+    externalSrc: true,
+  },
+  {
     id: 3,
     title: 'Github Finder Project',
     description:
@@ -41,14 +49,7 @@ export const PROJECTS = [
     icon: faBuilding,
     to: '/housing-marketplace/auth',
   },
-  {
-    id: 5,
-    title: 'Cocktail App',
-    description: `Users can search by drink name or ingredients to return data on over 635 different cocktails! 🥂🍻`,
-    icon: faGlassMartini,
-    to: '/drink-up',
-    isDisabled: true,
-  },
+
   // {
   //   id: 2,
   //   title: 'Lead Input App',
