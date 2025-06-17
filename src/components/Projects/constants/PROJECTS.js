@@ -10,7 +10,7 @@ export const PROJECTS = [
   {
     id: 6,
     title: 'NBA Everything',
-    description: `An all things NBA data, sourced from the Ball Don't Lie API`,
+    description: `An all things NBA data, sourced from the Ball Don't Lie API. Built with NextJS, React, Typescript and Tailwind`,
     icon: faBasketballBall,
     to: 'https://nba-everything-dev.vercel.app/',
     externalSrc: true,
@@ -18,7 +18,7 @@ export const PROJECTS = [
   {
     id: 5,
     title: 'Cocktail App',
-    description: `Search over 635 cocktails by drink name, glass type or ingredients 🥂🍻! Built with NextJS, React, Typescript and Tailwind`,
+    description: `Search over 600 cocktails by drink name, glass type or ingredients 🥂🍻! Built with NextJS, React, Typescript and Tailwind`,
     icon: faGlassMartini,
     to: 'https://find-cocktails.vercel.app/',
     externalSrc: true,
@@ -26,7 +26,7 @@ export const PROJECTS = [
   {
     id: 7,
     title: 'Morning Dough',
-    description: `A donut shop ecommerce website utilizing Next JS, Typescript and Square POS`,
+    description: `A donut shop ecommerce website utilizing Next JS, Typescript, Tailwind/Twin Macro/Styled components and Square POS`,
     icon: faShoppingBasket,
     to: 'http://morning-dough.com/',
     externalSrc: true,
