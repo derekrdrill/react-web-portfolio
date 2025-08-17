@@ -12,7 +12,7 @@ export const PROJECTS = [
     title: 'NBA Everything',
     description: `An all things NBA data, sourced from the Ball Don't Lie API. Built with NextJS, React, Typescript and Tailwind`,
     icon: faBasketballBall,
-    to: 'https://nba-everything-dev.vercel.app/',
+    to: 'https://nba-everything.vercel.app/',
     externalSrc: true,
   },
   {
