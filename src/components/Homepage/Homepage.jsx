@@ -40,12 +40,11 @@ const Homepage = ({ id }) => {
             </Grid>
             <Grid item xs={12} justifyContent={{ xs: 'center', sm: 'flex-start' }}>
               <HomePageText darkMode={darkMode} variant='h4' component='h1'>
-                {`I'm Derek! A passionate web developer from Charlotte, North Carolina`}
+                {`I'm Derek! A Lead UI Engineer from Charlotte, North Carolina`}
               </HomePageText>
               <br />
               <HomePageText darkMode={darkMode} variant='h6' component='h1'>
-                {`I strive to elegantly code user-friendly web apps. I am skilled at utilizing several techonologies, such as, React, NextJS, Vue, Nuxt, Typescript, Material UI, HeadlessUI,
-                  Tailwind, Styled-Components in the front-end, and ExpressJS back-ends connected to a Mongo or Postgres database.`}
+                {`I architect and engineer high-performance web applications with a focus on scalability and type-safety. I specialize in modern UI architecture utilizing React, Next.js, TypeScript, and Tailwind CSS to deliver seamless user experiences.`}
               </HomePageText>
             </Grid>
           </Grid>
