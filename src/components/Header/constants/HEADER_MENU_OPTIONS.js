@@ -1,7 +1,6 @@
 import React from 'react';
 import AppsIcon from '@mui/icons-material/Apps';
 import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
-import PetsIcon from '@mui/icons-material/Pets';
 import FaceIcon from '@mui/icons-material/Face';
 
 export const HEADER_MENU_OPTIONS = [
